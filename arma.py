@@ -10,7 +10,13 @@ class Arma:
 class Pistola(Arma):
     def __init__(self):
         pass
-    
+
+    def disparar(self, sonido, tiempo):
+        self.sonido = sonido
+        self.tiempo = tiempo
+        print(sonido)
+        print(tiempo)
+
     def Glock17(self):
         self.tipo = "Glock 17"
         self.velocidadDisparo = "Monotiro"
@@ -18,3 +24,7 @@ class Pistola(Arma):
         self.cargador = "15 balas"
         self.complementos = "Silenciador"
         self.daño = 9
+
+pistola = Pistola()
+for i in range(1,4):
+    pistola.disparar('BANG', i)
